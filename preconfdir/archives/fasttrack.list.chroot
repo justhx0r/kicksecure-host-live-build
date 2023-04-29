@@ -1,4 +1,4 @@
-deb tor+https://fasttrack.debian.net/debian bullseye-fasttrack main contrib non-free
+deb https://fasttrack.debian.net/debian bullseye-fasttrack main contrib non-free
 #eb http://5phjdr2nmprmhdhw4fdqfxvpvt363jyoeppewju2oqllec7ymnolieyd.onion/debian bullseye-fasttrack main contrib non-free
 #eb-src https://fasttrack.debian.net/debian bullseye-fasttrack main contrib non-free
 ## No onion fo fasttrack yet:

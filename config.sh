@@ -21,11 +21,11 @@ lb config \
   --firmware-chroot true \
   --system live  \
   --debian-installer live \
-  --parent-mirror-chroot "tor+https://deb.debian.org/debian" \
+  --parent-mirror-chroot "https://deb.debian.org/debian" \
   --parent-mirror-bootstrap "http://ftp.debian.org/debian" \
-  --parent-mirror-binary "tor+https://deb.debian.org/debian" \
-  --parent-mirror-chroot-security "tor+https://deb.debian.org/debian-security" \
-  --parent-mirror-binary-security "tor+https://deb.debian.org/debian-security" \
+  --parent-mirror-binary "https://deb.debian.org/debian" \
+  --parent-mirror-chroot-security "https://deb.debian.org/debian-security" \
+  --parent-mirror-binary-security "https://deb.debian.org/debian-security" \
   --mode debian \
   --conffile "$(pwd)/preconfig.conf" \
   --parent-distribution bullseye \

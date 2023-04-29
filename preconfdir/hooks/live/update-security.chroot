@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Secures your updates by routing them through tor.
+find /etc/apt -type f -name '*.list' -exec sed -i s'/http/tor+https/' {} +
+

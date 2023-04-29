@@ -29,9 +29,8 @@ security-misc
 metadata-cleaner
 zulumount-gui
 keepassxc
-zulucrypt-gui
-systemd-resolved
 resolvconf
+zulucrypt-gui
 netdiscover
 hardened-kernel
 hardened-malloc-kicksecure-enable

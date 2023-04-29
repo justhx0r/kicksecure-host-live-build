@@ -1,0 +1,7 @@
+#!/bin/sh
+umount chroot/*
+umount chroot/dev/pts
+chmod +x preconfdir/hooks/live/*
+rm -rf config chroot local/ .build/; bash config.sh && lb build | tee -a build.log
+umount chroot/*
+umount chroot/dev/pts 

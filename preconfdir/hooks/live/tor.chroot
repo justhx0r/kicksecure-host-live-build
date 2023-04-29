@@ -1,0 +1,58 @@
+#!/bin/sh
+systemctl enable tor vanguards sdwdate
+cat >> /etc/environment << EOF
+is_chroot=true
+TOR_SKIP_LAUNCH=1
+TOR_NO_SHOW_NETWORKCONFIG=1
+TOR_SKIP_CONTROLPORTTEST=1
+TOR_SOCKS_PORT=9050
+TOR_CONTROL_PORT=9051
+EOF
+cat > /etc/tor/torrc << EOF
+DNSPort 127.0.0.1:53
+ControlPort 127.0.0.1:9051
+CookieAuthentication 1
+SocksPort 127.0.0.1:9050 IsolateClientAddr IsolateClientProtocol IsolateDestPort IsolateDestAddr IPv6Traffic PreferIPv6
+TransPort 127.0.0.1:9040 IsolateClientAddr IsolateClientProtocol IsolateDestPort IsolateDestAddr IPv6Traffic PreferIPv6
+HardwareAccel 0
+UseMicrodescriptors 0
+UseEntryGuards 1
+NoExec 1
+AvoidDiskWrites 1
+MaxClientCircuitsPending 256
+VirtualAddrNetwork 10.192.0.0/10
+AutomapHostsOnResolve 1
+AutomapHostsSuffixes .exit,.onion
+TestSocks 1
+AllowNonRFC953Hostnames 0
+WarnPlaintextPorts 23,109,110,143,80
+EnforceDistinctSubnets 1
+ClientRejectInternalAddresses 1
+EOF
+cat > /lib/systemd/system/lator.service << EOF
+[Unit]
+Description=Get the latest 12 Tor Nodes. Bypass filters!
+After=tor.service tor@default.service network-online.target NetworkManager.service wpa_supplicant.service
+Wants=tor.service tor@default.service network-online.target NetworkManager.service wpa_supplicant.service
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+Restart=on-failure
+ExecStart=/usr/bin/lator `get_latest_tor_exits.py -n 12`
+[Install]
+WantedBy=multi-user.target
+EOF
+systemctl enable lator
+cat > /lib/systemd/system/lator.timer << EOF
+[Unit]
+Description=Get the latest 12 Tor Nodes. Bypass filters!
+After=tor.service tor@default.service network-online.target NetworkManager.service wpa_supplicant.service
+Wants=tor.service tor@default.service network-online.target NetworkManager.service wpa_supplicant.service
+[Timer]
+OnBootSec=600sec
+OnInactiveSec=600sec
+Unit=lator.service
+[Install]
+WantedBy=multi-user.target
+EOF
+systemctl enable lator.timer

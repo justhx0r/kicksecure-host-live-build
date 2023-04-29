@@ -1,0 +1,12 @@
+2d681f9fa112928651afb808ebc0380a  usr/bin/torsocks
+51d2f856eb20c97519a58ffda120f396  usr/lib/x86_64-linux-gnu/torsocks/libtorsocks.a
+35858234e66acaf2f592a83ba636bc04  usr/lib/x86_64-linux-gnu/torsocks/libtorsocks.so.0.0.0
+d803bd5a94524dc2227b873ee6558860  usr/share/bash-completion/completions/torsocks
+a27e9d11b7cb28f47e18baa32276d00c  usr/share/doc/torsocks/NEWS.Debian.gz
+325fe36a46254fefdfb257ffeae9f86b  usr/share/doc/torsocks/changelog.Debian.gz
+d2924d32085b7e025087882dd72bbb55  usr/share/doc/torsocks/changelog.gz
+f4c3b87350c3a68531dd88eca2af7b99  usr/share/doc/torsocks/copyright
+4baa19997ecb8ea4151ac4fa245326f6  usr/share/man/man1/torsocks.1.gz
+507a301984c272843e3d077d83eef4b1  usr/share/man/man5/torsocks.conf.5.gz
+d2a0a95102df617db33c48ccfdda24d1  usr/share/man/man8/torsocks.8.gz
+c03bc7ad0246ab3678faa2a3e0c6895b  usr/share/zsh/vendor-completions/_torsocks

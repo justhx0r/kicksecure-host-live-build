@@ -1,0 +1,6 @@
+deb tor+https://fasttrack.debian.net/debian bullseye-fasttrack main contrib non-free
+#eb http://5phjdr2nmprmhdhw4fdqfxvpvt363jyoeppewju2oqllec7ymnolieyd.onion/debian bullseye-fasttrack main contrib non-free
+#eb-src https://fasttrack.debian.net/debian bullseye-fasttrack main contrib non-free
+## No onion fo fasttrack yet:
+## htps://salsa.debian.org/fasttrack-team/support/-/issues/27
+## - htps://fasttrack.debian.net/

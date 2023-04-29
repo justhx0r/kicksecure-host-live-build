@@ -1,0 +1,4 @@
+#!/bin/sh
+cp /usr/share/security-misc/lkrg/30-lkrg-virtualbox.conf /etc/sysctl.d
+systemctl enable lkrg
+

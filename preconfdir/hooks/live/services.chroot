@@ -1,0 +1,5 @@
+#!/bin/sh
+systemctl enable live-mode-apparmor
+systemctl enable ufw lkrg kloak
+systemctl mask geoclue
+ufw default deny incoming

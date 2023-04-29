@@ -1,0 +1,4 @@
+# the daemon should start as soon as possible to provide entrophy at boot
+jitterentropy-rngd: systemd-service-file-refers-to-unusual-wantedby-target lib/systemd/system/jitterentropy.service basic.target
+# false positive, init script is shipped and maintainer script snippets are generated
+jitterentropy-rngd: package-supports-alternative-init-but-no-init.d-script lib/systemd/system/jitterentropy.service

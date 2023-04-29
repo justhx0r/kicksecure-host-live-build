@@ -15,7 +15,7 @@ lb config \
   --bootloader "grub" \
   -d bullseye \
   --iso-volume "bullseye" \
-  --archive-areas "main contrib non-free" \
+  --archive-areas "main contrib non-free non-free-firmware" \
   --linux-packages "linux-image linux-headers" \
   --firmware-binary true \
   --firmware-chroot true \

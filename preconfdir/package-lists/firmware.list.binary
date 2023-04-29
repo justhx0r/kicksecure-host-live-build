@@ -1,8 +1,5 @@
-firmware-linux-free
 firmware-nonfreedom
-firmware-microbit-micropython
-firmware-microbit-micropython-doc
+firmware-linux-free
 firmware-ath9k-htc
-firmware-tomu
 virtualbox-dkms
 

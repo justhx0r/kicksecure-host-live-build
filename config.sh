@@ -32,6 +32,6 @@ lb config \
   --mirror-bootstrap "https://deb.kicksecure.com/" \
   --mirror-chroot "https://deb.kicksecure.com/" \
   --mirror-binary "https://deb.kicksecure.com/" \
-  --keyring-packages "debian-archive-keyring"
+  --keyring-packages "debian-archive-keyring ca-certificates ca-certificates-java tor torsocks tor-geoipdb apt-transport-tor nyx vanguards"
 
 #  --parent-mirror-bootstrap-security "http://security.debian.org/debian-security" \

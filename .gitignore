@@ -1,0 +1,6 @@
+cache/*
+auto/*
+.build/*
+build.log
+config/*
+local/*
